@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/27 13:30:40 by jlasne            #+#    #+#             */
-/*   Updated: 2016/08/27 13:33:11 by jlasne           ###   ########.fr       */
+/*   Created: 2016/08/28 14:32:54 by jlasne            #+#    #+#             */
+/*   Updated: 2016/08/28 14:36:09 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char c);
+#ifndef LIBFT_H
+# define LIBFT_H
 
-void	ft_putstr(char const *s)
-{
-	int i;
+void	ft_putchar(char c);
 
-	i = 0;
-	while (s[i] != '\0')
-			ft_putchar(s[i]);
-}
+void	ft_putendl(char const *s);
+
+int		ft_strlen(char *str);
+
+void	ft_strclr(char *s);
+
+void	ft_putstr(char const *s);
+
+void	ft_putnbr(int n);
+
+#endif

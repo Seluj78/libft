@@ -6,12 +6,11 @@
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/27 13:43:20 by jlasne            #+#    #+#             */
-/*   Updated: 2016/08/27 13:46:41 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/08/28 14:37:41 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr(char const *s);
-void	ft_putchar(char c);
+#include "libft.h"
 
 void	ft_putendl(char const *s)
 {
