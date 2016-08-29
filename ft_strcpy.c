@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/27 13:53:45 by jlasne            #+#    #+#             */
-/*   Updated: 2016/08/28 22:03:45 by jlasne           ###   ########.fr       */
+/*   Created: 2016/08/28 22:16:53 by jlasne            #+#    #+#             */
+/*   Updated: 2016/08/29 21:31:03 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	ft_putnbr(int n)
+char	*ft_strcpy(char *str)
 {
-	if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	if (nb >= 0 && nb <= 9)
-	{
-		ft_puchar(nb + '0'):
-	}
+	char *cpy;
+	int i;
 
+	i = ft_strlen(str);
+
+	cpy = (char*)malloc(i + 1);
+
+	while (str[i] != '\0')
+	}
+		cpy[i] = str[i];
+		i++;
+	}
+	cpy[i] = '\0';
+	return (cpy);
 }
