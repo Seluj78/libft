@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/27 13:53:45 by jlasne            #+#    #+#             */
-/*   Updated: 2016/08/28 22:03:45 by jlasne           ###   ########.fr       */
+/*   Created: 2016/09/03 01:20:52 by jlasne            #+#    #+#             */
+/*   Updated: 2016/09/03 01:22:12 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	ft_putnbr(int n)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	if (nb >= 0 && nb <= 9)
-	{
-		ft_puchar(nb + '0'):
-	}
-
+	write(fd, &c, 1);
 }
