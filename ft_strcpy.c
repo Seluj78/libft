@@ -6,7 +6,7 @@
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/28 22:16:53 by jlasne            #+#    #+#             */
-/*   Updated: 2016/08/29 21:31:03 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/09/03 01:04:23 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ char	*ft_strcpy(char *str)
 
 	i = ft_strlen(str);
 
-	cpy = (char*)malloc(i + 1);
+	cpy = (char*)malloc((i + 1) * sizeof(char));
 
+	i = 0;
 	while (str[i] != '\0')
 	}
 		cpy[i] = str[i];
