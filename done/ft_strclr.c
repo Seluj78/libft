@@ -6,11 +6,11 @@
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/27 12:53:32 by jlasne            #+#    #+#             */
-/*   Updated: 2016/09/03 01:02:53 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/09/03 18:02:49 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_strlcr(char *s)
 {

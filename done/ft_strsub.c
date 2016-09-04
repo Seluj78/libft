@@ -6,7 +6,7 @@
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 00:49:24 by jlasne            #+#    #+#             */
-/*   Updated: 2016/09/03 01:16:24 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/09/03 18:05:54 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
-	int		i;
-	int		size_s;
+	char				*sub;
+	int					i;
+	unsigned int		size_s;
 
 	size_s = ft_strlen(s);
 	i = 0;

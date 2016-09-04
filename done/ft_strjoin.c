@@ -6,7 +6,7 @@
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 01:05:58 by jlasne            #+#    #+#             */
-/*   Updated: 2016/09/03 01:14:02 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/09/03 18:04:43 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	size_s1 = ft_strlen(s1);
 	size_s2 = ft_strlen(s2);
-	if (!(ret = char *) malloc((size_s1 + size_s2 + 1) sizeof (char)))
+	if (!(ret = (char *) malloc((size_s1 + size_s2 + 1) * sizeof (char))))
 			return (NULL);
 	while (j < size_s1)
 	{
