@@ -6,12 +6,15 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/03 14:10:16 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/03 14:32:53 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define _ERROR_	0x00
+# define _SUCCESS_	0x01
 
 # include <string.h>
 
@@ -33,4 +36,15 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *s1, char *s2);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_atoi(const char *str);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+
 #endif
