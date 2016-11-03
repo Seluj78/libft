@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/03 13:57:53 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/03 14:10:16 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-
+char	*ft_strstr(const char *s1, char *s2);
+char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 #endif
