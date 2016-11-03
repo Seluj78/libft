@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/27 12:53:32 by jlasne            #+#    #+#             */
-/*   Updated: 2016/09/03 18:02:49 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/03 13:02:00 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 13:09:07 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strlcr(char *s)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int i;
+	unsigned char	*str;
+	unsigned char	c2;
+	int				i;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	i = 0;
+	str = (unsigned char *)s;
+	c2 = (unsigned char)c;
+	while (n--)
 	{
-		s[i] = '\0';
-		i--;
+		if (str[i] == c2)
+			return ((void *)&str[i]);
+		i++;
 	}
+	return (NULL);
 }

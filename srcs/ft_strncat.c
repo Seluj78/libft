@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/03 01:25:43 by jlasne            #+#    #+#             */
-/*   Updated: 2016/09/03 17:59:27 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/03 13:50:26 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 13:50:46 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int i;
+	int		size;
+	int		cpt;
 
-	i = ft_strlen(s);
-	write(fd, s, i);
-	ft_putchar('\n');
+	cpt = 0;
+	size = ft_strlen(s1);
+	while (s2[cpt] && n--)
+		s1[size++] = s2[cpt++];
+	s1[size] = '\0';
+	return (s1);
 }

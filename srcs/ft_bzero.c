@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/28 14:32:54 by jlasne            #+#    #+#             */
-/*   Updated: 2016/09/03 18:02:25 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/02 22:36:30 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 12:40:06 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-void	ft_putchar(char c);
+void	ft_bzero(void *s, size_t n)
+{
+	size_t			i;
+	unsigned char	*ret;
 
-void	ft_putendl(char const *s);
-
-int		ft_strlen(const char *str);
-
-void	ft_strclr(char *s);
-
-void	ft_putstr(char const *s);
-
-void	ft_putnbr(int n);
-
-void	ft_putchar_fd (char c, int fd);
-
-#endif
+	ret = (unsigned char *)s;
+	i = 0;
+	if (n > 0)
+	{
+		while (i < n)
+		{
+			ret[i] = '\0';
+			i++;
+		}
+	}
+}

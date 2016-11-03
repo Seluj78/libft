@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 22:36:30 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/02 22:39:11 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/03 13:49:24 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 13:49:30 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n)
-{
-	size_t			i;
-	unsigned char	*ret;
+#include "libft.h"
 
-	ret = (unsigned char *)s;
-	i = 0;
-	if (n > 0)
-	{
-		while (i < n)
-		{
-			ret[i] = '\0';
-			i++;
-		}
-	}
+char	*ft_strcat(char *s1, char *s2)
+{
+	int		size;
+	int		cpt;
+
+	cpt = 0;
+	size = ft_strlen(s1);
+	while (s2[cpt])
+		s1[size++] = s2[cpt++];
+	s1[size] = '\0';
+	return (s1);
 }

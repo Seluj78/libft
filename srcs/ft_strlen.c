@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 21:47:27 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/02 22:18:54 by jlasne           ###   ########.fr       */
+/*   Created: 2016/08/27 12:48:10 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 13:26:40 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memset(void *s, int c, size_t n)
+int		ft_strlen(const char *str)
 {
-		unsigned char *ret;
+	int i;
 
-		ret = (unsigned char *)s;
-		if (n == 0);
-			return (s);
-		while (n > 0)
-		{
-			n--;
-			ret[n] = (unsigned char)c;
-		}
-		s = (void *)ret;
-		return (s);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

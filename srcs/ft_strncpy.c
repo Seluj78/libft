@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/30 00:49:24 by jlasne            #+#    #+#             */
-/*   Updated: 2016/09/03 18:05:54 by jlasne           ###   ########.fr       */
+/*   Created: 2016/09/03 17:42:56 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 13:31:49 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	char				*sub;
-	int					i;
-	unsigned int		size_s;
+	size_t	i;
 
-	size_s = ft_strlen(s);
 	i = 0;
-	if (!(sub = (char*) malloc ((len + 1) * sizeof (char))))
-			return (NULL);
-	if (len > size_s || start > size_s)
-			return (NULL);
-	while (len > 0)
+	while (src[i] && i < n)
 	{
-		sub[i] = s[start];
-		start++;
+		dst[i] = src[i];
 		i++;
-		len--;
 	}
-	sub[i] = '\0';
-	return (sub);
+	while (i < n)
+	{
+		dst[i] = '\0';
+		i++;
+	}
+	return (dst);
 }
