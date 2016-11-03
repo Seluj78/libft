@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/03 14:33:04 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/03 16:42:09 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,30 @@ SRC = ft_bzero.c\
 	  ft_isascii.c\
 	  ft_isprint.c\
 	  ft_toupper.c\
-	  ft_tolower.c
+	  ft_tolower.c\
+	  ft_putnbr_fd.c\
+	  ft_putnbr.c\
+	  ft_putchar.c\
+	  ft_putchar_fd.c\
+	  ft_putstr.c\
+	  ft_putstr_fd.c\
+	  ft_putendl.c\
+	  ft_putendl_fd.c\
+	  ft_strjoin.c\
+	  ft_strclr.c\
+	  ft_memalloc.c\
+	  ft_strnew.c\
+	  ft_strdel.c\
+	  ft_memdel.c\
+	  ft_striter.c\
+	  ft_striteri.c\
+	  ft_strmap.c\
+	  ft_strmapi.c\
+	  ft_strequ.c\
+	  ft_strnequ.c\
+	  ft_strtrim.c\
+	  ft_strsplit.c\
+	  ft_itoa.c
 
 OBJ = $(SRC:.c=.o)
 

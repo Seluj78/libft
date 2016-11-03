@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 21:47:27 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/03 15:54:04 by jlasne           ###   ########.fr       */
+/*   Created: 2016/08/30 00:49:24 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 16:25:46 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	unsigned char *ret;
+	char				*sub;
+	int					i;
+	unsigned int		size_s;
 
-	ret = (unsigned char *)s;
-	if (n == 0)
-		return (s);
-	while (n > 0)
+	size_s = ft_strlen(s);
+	i = 0;
+	if (!(sub = (char*)malloc((len + 1) * sizeof(char))))
+		return (NULL);
+	if (len > size_s || start > size_s)
+		return (NULL);
+	while (len > 0)
 	{
-		n--;
-		ret[n] = (unsigned char)c;
+		sub[i] = s[start];
+		start++;
+		i++;
+		len--;
 	}
-	s = (void *)ret;
-	return (s);
+	sub[i] = '\0';
+	return (sub);
 }
