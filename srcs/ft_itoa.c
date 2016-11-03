@@ -6,31 +6,41 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 16:41:43 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/03 16:42:25 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/03 16:48:16 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include <libft.h>
 
-char	*ft_itoa(int n)
+static size_t	get_str_len(int n)
 {
-	int		len;
-	char	*str;
-	long	nbr;
+	size_t		i;
 
-	nbr = n;
-	len = ft_nblen_l(nbr);
-	if (!(str = ft_strnew(len)))
-		return (NULL);
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
+}
+
+char			*ft_itoa(int n)
+{
+	char			*str;
+	size_t			str_len;
+	unsigned int	n_cpy;
+
+	str_len = get_str_len(n);
+	n_cpy = n;
 	if (n < 0)
-		nbr = -nbr;
-	while (len)
 	{
-		str[--len] = 48 + (nbr % 10);
-		nbr = nbr / 10;
+		n_cpy = -n;
+		str_len++;
 	}
-	if (str[len] == '0' && str[1] != '\0')
-		str[len] = '-';
+	if (!(str = ft_strnew(str_len)))
+		return (NULL);
+	str[--str_len] = n_cpy % 10 + '0';
+	while (n_cpy /= 10)
+		str[--str_len] = n_cpy % 10 + '0';
+	if (n < 0)
+		*(str + 0) = '-';
 	return (str);
 }

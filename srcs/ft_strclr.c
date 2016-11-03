@@ -6,7 +6,7 @@
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/27 12:53:32 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/03 15:42:19 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/03 17:49:13 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ void	ft_strclr(char *s)
 {
 	int i;
 
+	if (s == NULL)
+		return ;
 	i = ft_strlen(s);
-	while (i >= 0)
-	{
+	while (i--)
 		s[i] = '\0';
-		i--;
-	}
 }

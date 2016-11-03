@@ -6,36 +6,32 @@
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 01:05:58 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/03 15:39:09 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/03 17:51:43 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*ret;
-	int		size_s1;
-	int		size_s2;
-	int		j;
+	char	*new_str;
+	size_t	i;
+	size_t	j;
+	size_t	s1_len;
+	size_t	s2_len;
 
-	j = 0;
-	size_s1 = ft_strlen(s1);
-	size_s2 = ft_strlen(s2);
-	if (!(ret = (char *)malloc((size_s1 + size_s2 + 1) * sizeof(char))))
+	if (!s1 || !s2)
 		return (NULL);
-	while (j < size_s1)
-	{
-		ret[j] = s1[j];
-		j++;
-	}
-	j = 0;
-	while (j < size_s2)
-	{
-		ret[size_s1] = s2[j];
-		j++;
-		size_s1++;
-	}
-	ret[size_s1] = '\0';
-	return (ret);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	new_str = ft_strnew(s1_len + s2_len);
+	if (!new_str)
+		return (NULL);
+	i = -1;
+	j = -1;
+	while (++i < s1_len)
+		*(new_str + i) = *(s1 + i);
+	while (++j < s2_len)
+		*(new_str + i++) = *(s2 + j);
+	return (new_str);
 }

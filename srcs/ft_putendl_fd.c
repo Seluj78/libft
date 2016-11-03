@@ -6,7 +6,7 @@
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/03 01:25:43 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/03 15:56:54 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/03 17:47:14 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	int i;
-
-	i = ft_strlen(s);
-	write(fd, s, i);
-	ft_putchar('\n');
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
