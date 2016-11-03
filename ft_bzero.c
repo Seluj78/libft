@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/27 12:59:23 by jlasne            #+#    #+#             */
-/*   Updated: 2016/09/03 00:59:29 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/02 22:36:30 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/02 22:39:11 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_bzero(void *s, size_t n)
 {
-	write(1, &c, 1);
+	size_t			i;
+	unsigned char	*ret;
+
+	ret = (unsigned char *)s;
+	i = 0;
+	if (n > 0)
+	{
+		while (i < n)
+		{
+			ret[i] = '\0';
+			i++;
+		}
+	}
 }
