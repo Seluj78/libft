@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/03 17:44:35 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/05 10:39:21 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,16 +67,10 @@ SRC = ft_bzero.c\
 
 OBJ = $(SRC:.c=.o)
 
-SRC_PATH = srcs/
-
-SRC_POS = $(addprefix $(SRC_PATH),$(SRC))
-
-INC = -I includes
-
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Wall -Werror -Wextra $(INC) $(SRC_POS)
+	gcc -c -Wall -Werror -Wextra $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 

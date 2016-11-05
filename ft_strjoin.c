@@ -6,11 +6,11 @@
 /*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/30 01:05:58 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/03 17:51:43 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/05 10:39:42 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
