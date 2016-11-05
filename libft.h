@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/03 17:32:12 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/05 10:47:29 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,8 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
 char			*ft_itoa(int n);
+
+char			**ft_split_whitespaces(char *str);
+int				ft_power(int nb, int pow);
 
 #endif

@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlasne <jlasne@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/03 17:32:21 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/05 10:43:08 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/05 10:45:23 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/05 10:45:36 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(const char *s)
+int		ft_power(int nb, int pow)
 {
-	int		size_s;
-	int		i;
-	char	*ret;
+	int x;
 
-	i = -1;
-	size_s = ft_strlen(s);
-	if (!(ret = (char *)malloc((size_s + 1) * sizeof(char))))
-		return (NULL);
-	while (s[++i] != '\0')
-		ret[i] = s[i];
-	ret[i] = '\0';
-	return (ret);
+	x = nb;
+	while (pow > 1)
+	{
+		nb *= x;
+		pow--;
+	}
+	return (nb);
 }
