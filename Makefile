@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/21 10:55:46 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/21 11:04:23 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -124,11 +124,6 @@ all: $(NAME)
 ### TODO : Pretty makefile
 
 $(NAME): $(OBJ)
-	#@echo "${Yellow}#==========${Purple}Libft's Makefile${Yellow}=========#${reset}"
-	#@echo "${BBlue}    Compiling ...${reset}"
-	#@echo "${White}$(SRC)${reset}"
-	#@echo "into object files :"
-	#@echo "$(OBJ)"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
