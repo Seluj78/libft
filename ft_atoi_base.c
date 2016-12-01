@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 11:07:33 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/28 11:07:35 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/28 12:56:35 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int		ft_base(char c, int base)
 {
-	int				j;
-	static char		tab[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
-	'9', 'A', 'B', 'C', 'D', 'E', 'F'};
+	int			j;
+	static char tab[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
+		'9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
 	if (c >= 'a' && c <= 'f')
 		c -= 32;
@@ -30,9 +30,9 @@ static int		ft_base(char c, int base)
 
 static int		ft_atoi_loop(const char *str, int base)
 {
-	int		result;
-	int		base_val;
-	int		i;
+	int result;
+	int base_val;
+	int i;
 
 	result = 0;
 	i = 0;
@@ -51,8 +51,8 @@ static int		ft_atoi_loop(const char *str, int base)
 
 unsigned int	ft_atoi_base(const char *str, int base)
 {
-	int		i;
-	int		n;
+	int i;
+	int n;
 
 	i = 0;
 	n = 1;
@@ -67,5 +67,5 @@ unsigned int	ft_atoi_base(const char *str, int base)
 		i++;
 	}
 	return (n == -1 ? -ft_atoi_loop(&str[i], base) :
-	ft_atoi_loop(&str[i], base));
+			ft_atoi_loop(&str[i], base));
 }

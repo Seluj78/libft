@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/28 11:08:13 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/28 11:09:42 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/28 12:51:20 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char		*ft_itoa_base(unsigned int n, int base)
 	int				len;
 	char			*str;
 	static char		tab[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
-	'9', 'A', 'B', 'C', 'D', 'E', 'F'};
+	'9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
 	if (base > 16 || base <= 1)
 		return (NULL);
