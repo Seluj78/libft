@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_l.c                                      :+:      :+:    :+:   */
+/*   ft_putnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: estephan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/28 11:09:09 by jlasne            #+#    #+#             */
-/*   Updated: 2016/12/06 19:15:48 by estephan         ###   ########.fr       */
+/*   Created: 2016/12/01 14:30:56 by estephan          #+#    #+#             */
+/*   Updated: 2016/12/07 14:37:33 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putnbr_l(long int n)
+int		ft_putnstr(const char *str, int n)
 {
-	if (n < 0)
+	if (str && (int)(ft_strlen(str)) >= n)
 	{
-		write(1, "-", 1);
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr_l(n / 10);
-		ft_putnbr_l(n % 10);
+		write(1, str, n);
+		return (n);
 	}
 	else
-		ft_putchar(n + 48);
+	{
+		ft_putstr(str);
+		return (ft_strlen(str));
+	}
 }
