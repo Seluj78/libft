@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2016/12/13 15:01:36 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/12/13 15:08:46 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,4 +103,5 @@ int				ft_putnwchar(int c, int size);
 int				ft_putwchar(int c);
 int				ft_putnstr(const char *str, int n);
 char			*ft_itoa_base_uint(uintmax_t n, int base);
+int				ft_printf(const char *format, ...);
 #endif

@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/12/13 15:02:24 by jlasne           ###   ########.fr        #
+#    Updated: 2016/12/13 15:06:30 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -137,22 +137,29 @@ OBJ = $(SRC:.c=.o)
 
 INC = ./includes
 
+FT_PRINTF = ./ft_printf/ft_printf.a
+
 all: $(NAME)
 
 
 ### TODO : Pretty makefile
 
-$(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+$(NAME): $(FT_PRINTF) $(OBJ)
+	cp $(FT_PRINTF) $(NAME)
+	ar r $(NAME) $(OBJ)
 	ranlib $(NAME)
+
+$(FT_PRINTF):
+	make -C /ft_printf/
 
 %.o:%.c
 	gcc -c $(FLAGS) -I $(INC) $< -o $@
 
 clean:
 	/bin/rm -f $(OBJ)
+	make fclean -C ./ft_printf/
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	$(RM) $(NAME) $(FT_PRINTF)
 
 re: fclean all
