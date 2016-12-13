@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/12/13 15:06:30 by jlasne           ###   ########.fr        #
+#    Updated: 2016/12/13 15:21:38 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -150,7 +150,7 @@ $(NAME): $(FT_PRINTF) $(OBJ)
 	ranlib $(NAME)
 
 $(FT_PRINTF):
-	make -C /ft_printf/
+	make -C ./ft_printf/
 
 %.o:%.c
 	gcc -c $(FLAGS) -I $(INC) $< -o $@
