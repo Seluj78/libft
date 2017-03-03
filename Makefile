@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2017/03/03 11:33:53 by jlasne           ###   ########.fr        #
+#    Updated: 2017/03/03 12:19:22 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -133,10 +133,14 @@ SRC = ft_bzero.c\
 	  ft_putnstr.c\
 	  ft_itoa_base_uint.c\
 	  get_next_line.c\
-	  ft_str_to_wordtab.c\
-	  ft_free_chartab.c\
-	  ft_tablen.c\
-	  ft_tabdup.c
+	  ft_str_to_tab_sep.c\
+	  ft_str_to_tab_sep_helper.c\
+	  ft_free_array.c\
+	  ft_tabdup.c\
+	  ft_add_to_array.c\
+	  ft_arraylen.c\
+	  ft_remfrom_array.c\
+	  ft_strjoin_sep.c
 
 OBJ = $(SRC:.c=.o)
 

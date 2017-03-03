@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabdup.c                                        :+:      :+:    :+:   */
+/*   ft_free_array.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/03 11:33:29 by jlasne            #+#    #+#             */
-/*   Updated: 2017/03/03 11:53:39 by jlasne           ###   ########.fr       */
+/*   Created: 2017/03/03 11:27:17 by jlasne            #+#    #+#             */
+/*   Updated: 2017/03/03 11:49:08 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	**ft_tabdup(char **tab)
+int		ft_free_array(char **arr)
 {
 	int		i;
-	int		j;
-	char	**dup;
 
-	j = 0;
+	if (arr == NULL)
+		return (1);
 	i = 0;
-	while (tab[i] != '\0')
-		i++;
-	dup = malloc(i * sizeof(char *));
-	while (j < i)
+	while (arr[i] != NULL)
 	{
-		dup[j] = ft_strdup(tab[j]);
-		j++;
+		free(arr[i]);
+		i++;
 	}
-	return (dup);
+	if (arr != NULL)
+		free(arr);
+	return (1);
 }

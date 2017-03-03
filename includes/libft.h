@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2017/03/03 11:34:07 by jlasne           ###   ########.fr       */
+/*   Updated: 2017/03/03 12:19:22 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,11 @@ int				ft_putnstr(const char *str, int n);
 char			*ft_itoa_base_uint(uintmax_t n, int base);
 int				ft_printf(const char *format, ...);
 char			**ft_str_to_tab_sep(char *str, char separator, int opt);
-void			ft_free_chartab(char **tab, int size);
-int				ft_tablen(char **tab);
+int				ft_free_array(char **arr);
 char			**ft_tabdup(char **tab);
+char			**ft_add_to_array(char *str, char **arr);
+int				ft_arraylen(char **arr);
+char			**ft_remfrom_array(int rem, char **arr);
+char			*ft_strjoin_sep(char *s1, char *sep, char *s2);
+char			*ft_strepur(char *str, int a);
 #endif
