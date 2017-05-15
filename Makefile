@@ -6,57 +6,13 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2017/03/03 13:28:40 by jlasne           ###   ########.fr        #
+#    Updated: 2017/05/15 15:42:58 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#================================COLORS========================================#
-
-# Reset
-
-reset=\033[0m       # Text Reset
-
-
-# Regular Colors
-
-Black=\033[0;30m        # Black
-Red=\033[0;31m          # Red
-Green=\033[0;32m        # Green
-Yellow=\033[0;33m       # Yellow
-Blue=\033[0;34m         # Blue
-Purple=\033[0;35m       # Purple
-Cyan=\033[0;36m         # Cyan
-White=\033[0;37m        # White
-
-
-# Bold
-
-BBlack=\033[1;30m       # Black
-BRed=\033[1;31m         # Red
-BGreen=\033[1;32m       # Green
-BYellow=\033[1;33m      # Yellow
-BBlue=\033[1;34m        # Blue
-BPurple=\033[1;35m      # Purple
-BCyan=\033[1;36m        # Cyan
-BWhite=\033[1;37m       # White
-
-
-# Underline
-
-UBlack=\033[4;30m       # Black
-URed=\033[4;31m         # Red
-UGreen=\033[4;32m       # Green
-UYellow=\033[4;33m      # Yellow
-UBlue=\033[4;34m        # Blue
-UPurple=\033[4;35m      # Purple
-UCyan=\033[4;36m        # Cyan
-UWhite=\033[4;37m       # White
-
-#=================================MAKEFILE=====================================#
-
 NAME = libft.a
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -g3 -Wall -Wextra -Werror
 
 SRC = ft_bzero.c\
 	  ft_memset.c\
@@ -143,7 +99,13 @@ SRC = ft_bzero.c\
 	  ft_strjoin_sep.c\
 	  ft_print_array.c
 
+SRC_PATH = ./srcs
+
+SRC_POS = $(addprefix $(SRC_PATH),$(SRC))
+
 OBJ = $(SRC:.c=.o)
+
+OBJ_DIR = ./obj
 
 INC = ./includes
 
@@ -151,25 +113,31 @@ FT_PRINTF = ./ft_printf/ft_printf.a
 
 all: $(NAME)
 
-
-### TODO : Pretty makefile
-
 $(NAME): $(FT_PRINTF) $(OBJ)
-	cp $(FT_PRINTF) $(NAME)
-	ar r $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@echo "\033[35mCopying ft_printf.a\033[0m"
+	@cp $(FT_PRINTF) $(NAME)
+	@echo "\033[35mCompiling libft.a with ft_printf.a\033[0m"
+	@ar r $(NAME) $(OBJ)
+	@echo "\033[35mOptimizing library\033[0m"
+	@ranlib $(NAME)
+	@mv *.o $(OBJ_DIR)/
+	@echo "\033[35mLibft compilation complete\033[0m" "\033[32m [ok] \033[32m"
 
 $(FT_PRINTF):
-	make -C ./ft_printf/
+	@echo "\033[35mCompiling ft_printf.a\033[0m"
+	@make -C ./ft_printf/
 
-%.o:%.c
-	gcc -c $(FLAGS) -I $(INC) $< -o $@
+%.o:$(SRC_PATH)/%.c
+	@gcc -c $(FLAGS) -I $(INC) $< -o $@
 
 clean:
-	/bin/rm -f $(OBJ)
-	make fclean -C ./ft_printf/
+	@echo "\033[35mRemoving .o files\033[0m"
+	@/bin/rm -f $(OBJ)
+	@echo "\033[35mRemoving ft_printf/*.o files\033[0m"
+	@make fclean -C ./ft_printf/
 
 fclean: clean
-	$(RM) $(NAME) $(FT_PRINTF)
+	@echo "\033[35mRemoving .a files\033[0m"
+	@$(RM) $(NAME) $(FT_PRINTF)
 
 re: fclean all

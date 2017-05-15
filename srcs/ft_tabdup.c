@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strisdigit.c                                    :+:      :+:    :+:   */
+/*   ft_tabdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/28 11:09:21 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/28 11:09:24 by jlasne           ###   ########.fr       */
+/*   Created: 2017/03/03 11:33:29 by jlasne            #+#    #+#             */
+/*   Updated: 2017/03/03 14:10:04 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-int		ft_strisdigit(char *str)
+char	**ft_tabdup(char **arr)
 {
 	int		i;
-	int		end;
+	int		len;
+	char	**cpy;
 
 	i = -1;
-	end = 0;
-	while (str[++i] == ' ')
-		;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i])
-	{
-		if ((str[i] >= 48 && str[i] <= 57) && end == 0)
-			i++;
-		else if (str[i] == ' ' && end == 0)
-			end = 1;
-		else
-			return (0);
-	}
-	return (1);
+	len = ft_arraylen(arr);
+	cpy = (char **)malloc(sizeof(char *) * len + 1);
+	while (arr && arr[++i])
+		cpy[i] = ft_strdup(arr[i]);
+	cpy[i] = NULL;
+	return (cpy);
 }
