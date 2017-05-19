@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2017/05/19 09:55:00 by jlasne           ###   ########.fr        #
+#    Updated: 2017/05/19 13:29:16 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -120,7 +120,7 @@ $(NAME): $(FT_PRINTF) $(OBJ)
 	@ar r $(NAME) $(OBJ)
 	@echo "\033[35mOptimizing library\033[0m"
 	@ranlib $(NAME)
-	@mv *.o $(OBJ_DIR)/
+	#@mv *.o $(OBJ_DIR)/
 	@echo "\033[35mLibft compilation complete\033[0m" "\033[32m [ok] \033[32m"
 
 $(FT_PRINTF):
