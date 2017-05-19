@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2017/05/19 13:29:16 by jlasne           ###   ########.fr        #
+#    Updated: 2017/05/19 17:41:02 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -120,7 +120,8 @@ $(NAME): $(FT_PRINTF) $(OBJ)
 	@ar r $(NAME) $(OBJ)
 	@echo "\033[35mOptimizing library\033[0m"
 	@ranlib $(NAME)
-	#@mv *.o $(OBJ_DIR)/
+	@if [ -d "./obj" ]; then echo "\033[35mDirectory\033[34m obj\033[35m already exists\033[0m"; else mkdir obj; fi
+	@mv *.o $(OBJ_DIR)/
 	@echo "\033[35mLibft compilation complete\033[0m" "\033[32m [ok] \033[32m"
 
 $(FT_PRINTF):
@@ -132,12 +133,13 @@ $(FT_PRINTF):
 
 clean:
 	@echo "\033[35mRemoving .o files\033[0m"
-	@/bin/rm -f $(OBJ)
+	@/bin/rm -rf obj/$(OBJ)
 	@echo "\033[35mRemoving ft_printf/*.o files\033[0m"
-	@make fclean -C ../ft_printf/
+	@make clean -C ../ft_printf/
 
 fclean: clean
 	@echo "\033[35mRemoving .a files\033[0m"
-	@$(RM) $(NAME) $(FT_PRINTF)
+	@/bin/rm -rf $(NAME)
+	@rm ../ft_printf/ft_printf.a
 
 re: fclean all
