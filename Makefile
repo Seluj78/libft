@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2017/05/15 15:42:58 by jlasne           ###   ########.fr        #
+#    Updated: 2017/05/19 09:55:00 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -109,7 +109,7 @@ OBJ_DIR = ./obj
 
 INC = ./includes
 
-FT_PRINTF = ./ft_printf/ft_printf.a
+FT_PRINTF = ../ft_printf/ft_printf.a
 
 all: $(NAME)
 
@@ -125,7 +125,7 @@ $(NAME): $(FT_PRINTF) $(OBJ)
 
 $(FT_PRINTF):
 	@echo "\033[35mCompiling ft_printf.a\033[0m"
-	@make -C ./ft_printf/
+	@make -C ../ft_printf/
 
 %.o:$(SRC_PATH)/%.c
 	@gcc -c $(FLAGS) -I $(INC) $< -o $@
@@ -134,7 +134,7 @@ clean:
 	@echo "\033[35mRemoving .o files\033[0m"
 	@/bin/rm -f $(OBJ)
 	@echo "\033[35mRemoving ft_printf/*.o files\033[0m"
-	@make fclean -C ./ft_printf/
+	@make fclean -C ../ft_printf/
 
 fclean: clean
 	@echo "\033[35mRemoving .a files\033[0m"
