@@ -122,7 +122,7 @@ set(SOURCE_FILES
 
         # TODO: tcaps
 
-        )
+        srcs/core/ft_ctostr.c srcs/core/ft_uimtoa.c)
 
 
 include_directories(includes)

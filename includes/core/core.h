@@ -113,5 +113,8 @@ char			**ft_remfrom_array(int rem, char **arr);
 char			*ft_strjoin_sep(char *s1, char *sep, char *s2);
 char			*ft_strepur(char *str, int a);
 void			ft_print_array(char **arr);
+char		*ft_uimtoa(uintmax_t num);
+char		*ft_imtoa(intmax_t num);
+char	*ft_ctostr(char c, int nb);
 
 #endif
