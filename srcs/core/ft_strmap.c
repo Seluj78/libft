@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2017/03/03 13:28:28 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/03 16:03:01 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 16:12:59 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "core/core.h"
 
-# define _ERROR_	0x00
-# define _SUCCESS_	0x01
+char	*ft_strmap(char const *s, char (*f)(char))
+{
+	char	*str;
+	int		i;
 
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <inttypes.h>
-# include <get_next_line/get_next_line.h>
-# include <ft_printf/core/ft_printf.h>
-
-#endif
+	i = 0;
+	if (!s || !f)
+		return ((char *)s);
+	if (!(str = ft_strnew(ft_strlen(s))))
+		return (NULL);
+	while (s[i])
+	{
+		str[i] = f(s[i]);
+		i++;
+	}
+	return (str);
+}

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2017/03/03 13:28:28 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/03 16:14:53 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 16:14:59 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "core/core.h"
 
-# define _ERROR_	0x00
-# define _SUCCESS_	0x01
-
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <inttypes.h>
-# include <get_next_line/get_next_line.h>
-# include <ft_printf/core/ft_printf.h>
-
-#endif
+int		ft_strequ(char const *s1, char const *s2)
+{
+	if (s1 && s2)
+	{
+		if (ft_strcmp(s1, s2) == 0)
+			return (1);
+	}
+	else if (s1 == s2)
+		return (1);
+	return (0);
+}

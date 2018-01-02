@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_arraylen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2017/03/03 13:28:28 by jlasne           ###   ########.fr       */
+/*   Created: 2017/03/03 11:44:35 by jlasne            #+#    #+#             */
+/*   Updated: 2017/03/03 11:44:54 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <core/core.h>
 
-# define _ERROR_	0x00
-# define _SUCCESS_	0x01
+int		ft_arraylen(char **arr)
+{
+	int		i;
 
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <inttypes.h>
-# include <get_next_line/get_next_line.h>
-# include <ft_printf/core/ft_printf.h>
-
-#endif
+	if (arr == NULL)
+		return (0);
+	i = 0;
+	while (arr[i] != NULL)
+		i = i + 1;
+	return (i);
+}

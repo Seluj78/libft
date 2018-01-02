@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2017/03/03 13:28:28 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/03 12:55:22 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/03 12:55:26 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "core/core.h"
 
-# define _ERROR_	0x00
-# define _SUCCESS_	0x01
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*d;
+	unsigned char	*s;
 
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <inttypes.h>
-# include <get_next_line/get_next_line.h>
-# include <ft_printf/core/ft_printf.h>
-
-#endif
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		d[i] = s[i];
+		if (d[i] == (unsigned char)c)
+			return (dst + (i + 1));
+		i++;
+	}
+	return (NULL);
+}

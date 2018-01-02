@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_print_array.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2017/03/03 13:28:28 by jlasne           ###   ########.fr       */
+/*   Created: 2017/03/03 13:27:05 by jlasne            #+#    #+#             */
+/*   Updated: 2017/03/03 13:28:58 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <core/core.h>
 
-# define _ERROR_	0x00
-# define _SUCCESS_	0x01
+void	ft_print_array(char **arr)
+{
+	int i;
 
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <inttypes.h>
-# include <get_next_line/get_next_line.h>
-# include <ft_printf/core/ft_printf.h>
-
-#endif
+	i = 0;
+	while (arr[i] != '\0')
+	{
+		ft_printf("%s\n", arr[i]);
+		i++;
+	}
+}

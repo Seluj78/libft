@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tabdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 12:36:05 by jlasne            #+#    #+#             */
-/*   Updated: 2017/03/03 13:28:28 by jlasne           ###   ########.fr       */
+/*   Created: 2017/03/03 11:33:29 by jlasne            #+#    #+#             */
+/*   Updated: 2017/03/03 14:10:04 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <core/core.h>
 
-# define _ERROR_	0x00
-# define _SUCCESS_	0x01
+char	**ft_tabdup(char **arr)
+{
+	int		i;
+	int		len;
+	char	**cpy;
 
-# include <string.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <inttypes.h>
-# include <get_next_line/get_next_line.h>
-# include <ft_printf/core/ft_printf.h>
-
-#endif
+	i = -1;
+	len = ft_arraylen(arr);
+	cpy = (char **)malloc(sizeof(char *) * len + 1);
+	while (arr && arr[++i])
+		cpy[i] = ft_strdup(arr[i]);
+	cpy[i] = NULL;
+	return (cpy);
+}
