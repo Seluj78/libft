@@ -10,171 +10,161 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME			=	libjlasne.a
+NAME = libjlasne.a
 
-# Libft sources
-SRC_SUBDIR		+= srcs/core/
-SRCS			+= ft_add_to_array.c ft_arraylen.c ft_atoi.c ft_atoi_base.c \
-ft_atoi_nbase.c ft_binlen.c ft_bzero.c ft_cat.c ft_charwlen.c ft_free_array.c \
-ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c \
-ft_itoa_base.c ft_itoa_base_l.c ft_itoa_base_ll.c ft_itoa_base_uint.c \
-ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c \
-ft_memmove.c ft_memset.c ft_nblen.c ft_nblen_l.c ft_nblen_ll.c ft_power.c \
-ft_print_array.c ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \
-ft_putnbr.c ft_putnbr_fd.c ft_putnbr_l.c ft_putnbr_ll.c ft_putnstr.c \
-ft_putnwchar.c ft_putnwstr.c ft_putstr.c ft_putstr_fd.c ft_putwchar.c \
-ft_remfrom_array.c ft_split_whitespaces.c ft_str_to_tab_sep.c \
-ft_str_to_tab_sep_helper.c ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c \
-ft_strcpy.c ft_strdel.c ft_strdup.c ft_strequ.c ft_strisdigit.c ft_striter.c \
-ft_striteri.c ft_strjoin.c ft_strjoin_sep.c ft_strlcat.c ft_strlen.c \
-ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c \
-ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c \
-ft_strtrim.c ft_strwlen.c ft_tabdup.c ft_tolower.c ft_toupper.c
+# Libft Core
+SRCS += core/ft_add_to_array.c \
+		core/ft_arraylen.c \
+		core/ft_atoi.c \
+		core/ft_atoi_base.c \
+		core/ft_atoi_nbase.c \
+		core/ft_binlen.c \
+		core/ft_bzero.c \
+		core/ft_cat.c \
+		core/ft_charwlen.c \
+		core/ft_free_array.c \
+		core/ft_isalnum.c \
+		core/ft_isalpha.c \
+		core/ft_isascii.c \
+		core/ft_isdigit.c \
+		core/ft_isprint.c \
+		core/ft_itoa.c \
+		core/ft_itoa_base.c \
+		core/ft_itoa_base_l.c \
+		core/ft_itoa_base_ll.c \
+		core/ft_itoa_base_uint.c \
+		core/ft_memalloc.c \
+		core/ft_memccpy.c \
+		core/ft_memchr.c \
+		core/ft_memcmp.c \
+		core/ft_memcpy.c \
+		core/ft_memdel.c \
+		core/ft_memmove.c \
+		core/ft_memset.c \
+		core/ft_nblen.c \
+		core/ft_nblen_l.c \
+		core/ft_nblen_ll.c \
+		core/ft_power.c \
+		core/ft_print_array.c \
+		core/ft_putchar.c \
+		core/ft_putchar_fd.c \
+		core/ft_putendl.c \
+		core/ft_putendl_fd.c \
+		core/ft_putnbr.c \
+		core/ft_putnbr_fd.c \
+		core/ft_putnbr_l.c \
+		core/ft_putnbr_ll.c \
+		core/ft_putnstr.c \
+		core/ft_putnwchar.c \
+		core/ft_putnwstr.c \
+		core/ft_putstr.c \
+		core/ft_putstr_fd.c \
+		core/ft_putwchar.c \
+		core/ft_remfrom_array.c \
+		core/ft_split_whitespaces.c \
+		core/ft_str_to_tab_sep.c \
+		core/ft_str_to_tab_sep_helper.c \
+		core/ft_strcat.c \
+		core/ft_strchr.c \
+		core/ft_strclr.c \
+		core/ft_strcmp.c \
+		core/ft_strcpy.c \
+		core/ft_strdel.c \
+		core/ft_strdup.c \
+		core/ft_strequ.c \
+		core/ft_strisdigit.c \
+		core/ft_striter.c \
+		core/ft_striteri.c \
+		core/ft_strjoin.c \
+		core/ft_strjoin_sep.c \
+		core/ft_strlcat.c \
+		core/ft_strlen.c \
+		core/ft_strmap.c \
+		core/ft_strmapi.c \
+		core/ft_strncat.c \
+		core/ft_strncmp.c \
+		core/ft_strncpy.c \
+		core/ft_strnequ.c \
+		core/ft_strnew.c \
+		core/ft_strnstr.c \
+		core/ft_strrchr.c \
+		core/ft_strsplit.c \
+		core/ft_strstr.c \
+		core/ft_strsub.c \
+		core/ft_strtrim.c \
+		core/ft_strwlen.c \
+		core/ft_tabdup.c \
+		core/ft_tolower.c \
+		core/ft_toupper.c \
 
-# ft_printf sources
-SRC_SUBDIR		+= srcs/ft_printf/checks
-SRCS			+= srcs/ft_printf/checks/check_flags.c srcs/ft_printf/checks/check_precision_max.c srcs/ft_printf/checks/check_spaces.c srcs/ft_printf/checks/check_width.c
 
-SRC_SUBDIR		+= srcs/ft_printf/color
-SRCS			+= color.c color2.c color3.c
+#Printf
+# Printf Checks
+SRCS +=     ft_printf/checks/check_flags.c \
+		ft_printf/checks/check_precision_max.c \
+		ft_printf/checks/check_spaces.c \
+		ft_printf/checks/check_width.c \
 
-SRC_SUBDIR		+= srcs/ft_printf/convert
-SRCS			+= convert_c.c convert_d.c convert_jzlh.c convert_o.c convert_p.c convert_percent.c convert_r.c convert_s.c convert_u.c convert_x.c
+#Printf color
+SRCS +=     ft_printf/color/color.c \
+		ft_printf/color/color2.c \
+		ft_printf/color/color3.c \
 
-SRC_SUBDIR		+= srcs/ft_printf/core
-SRCS			+= ft_printf.c parser.c utils.c
+#Printf Convert
+SRCS +=     ft_printf/convert/convert_c.c \
+		ft_printf/convert/convert_d.c \
+		ft_printf/convert/convert_jzlh.c \
+		ft_printf/convert/convert_o.c \
+		ft_printf/convert/convert_p.c \
+		ft_printf/convert/convert_percent.c \
+		ft_printf/convert/convert_r.c \
+		ft_printf/convert/convert_s.c \
+		ft_printf/convert/convert_u.c \
+		ft_printf/convert/convert_x.c \
 
-SRC_SUBDIR		+= srcs/ft_printf/print
-SRCS			+= print_d.c print_o.c print_u.c print_x.c print_xx.c
+#Printf Core
+SRCS +=     ft_printf/core/ft_printf.c \
+		ft_printf/core/parser.c \
+		ft_printf/core/utils.c \
 
-# Logger sources
+#Printf Print
+SRCS +=     ft_printf/print/print_d.c \
+		ft_printf/print/print_o.c \
+		ft_printf/print/print_u.c \
+		ft_printf/print/print_x.c \
+		ft_printf/print/print_xx.c \
 
-# Tcaps sources
 
-###############################################################################
-#																			  #
-#									CONFIG									  #
-#																			  #
-###############################################################################
+SRC_PATH = ./srcs
 
-#  Compiler
-CC				= clang
-CFLAGS			= -Wall -Wextra
+SRC_POS = $(addprefix $(SRC_PATH),$(SRCS))
 
-ifneq ($(NOERR),yes)
-    CFLAGS		+= -Werror
-endif
+OBJ = $(SRCS:.c=.o)
 
-ifeq ($(DEV),yes)
-    CFLAGS		+= -g
-endif
+OBJ_DIR = ./obj
 
-ifeq ($(SAN),yes)
-    CFLAGS		+= -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls
-endif
+INC = includes
+INC += includes/core/includes
+INC += includes/ft_printf/
 
-#The Directories, Source, Includes, Objects and Libraries
-INC				= -I includes
-INC_TESTS		+= -I tests/includes
+all: $(NAME)
 
-vpath  %c $(SRC_SUBDIR)
-vpath  %c $(SRC_TESTS_SUBDIR)
+$(NAME): $(OBJ)
+	ar r $(NAME) $(OBJ)
+	ranlib $(NAME)
+	if [ -d "./obj" ]; then echo "\033[35mDirectory\033[34m obj\033[35m already exists\033[0m"; else mkdir obj; fi
+	mv *.o $(OBJ_DIR)/
+	echo "\033[35mLibft compilation complete\033[0m" "\033[32m [ok] \033[32m"
 
-#Objects
-OBJS_DIR		= objs
-OBJS			= $(SRCS:%.c=$(OBJS_DIR)/%.o)
-
-#OBJS_TESTS_DIR	= objs_tests
-OBJS_TESTS		= $(SRCS_TESTS:%.c=$(OBJS_DIR)/%.o)
-
-# Dependencies
-DEPS_DIR		= .deps
-DEPS			= $(SRCS:%.c=$(DEPS_DIR)/%.d)
-DEPS			+= $(SRCS_TESTS:%.c=$(DEPS_DIR)/%.d)
-BUILD_DIR		= $(OBJS_DIR) $(DEPS_DIR) $(OBJS_TESTS_DIR)
-
-## libft
-INC				+= -I includes/core/includes
-
-## ft_printf
-INC				+= -I includes/ft_printf/includes
-
-## Lib criterion
-LIBCRITERION_ROOT	+= ../Criterion
-LIBCRITERION_DIR	+= $(LIBCRITERION_ROOT)/build
-INC_TESTS			+= -I $(LIBCRITERION_ROOT)/include
-
-#Utils
-RM				= rm -rf
-MKDIR			= mkdir -p
-
-DOXYGEN = $(shell doxygen -v dot 2> /dev/null)
-
-###############################################################################
-#																			  #
-#								DOT NOT EDIT BELOW							  #
-#																			  #
-###############################################################################
- #########
-## RULES ##
- #########
-
-all: $(DEPS_DIR) $(NAME)
-
-$(NAME): $(OBJS)
-	ar rc $@ $(OBJS)
-	ranlib $@
-
-$(OBJS_DIR)/%.o: %.c | $(OBJS_DIR) $(DEPS_DIR) Makefile
-	$(CC) $(CFLAGS) $(INC) $(INC_TESTS) -o $@ -c $<
-	$(CC) $(INC) $(INC_TESTS) -MM $< -MT $@ -MP -MF $(DEPS_DIR)/$*.d
-
-tests: $(OBJS_TESTS) $(NAME)
-	$(CC) $(CFLAGS) -o test $(OBJS_TESTS) -L ./ -lcbc -L $(LIBCRITERION_DIR) -lcriterion $(INC) $(INC_TESTS)
-	echo "done"
-
-# Add dependency as prerequisites
-ifneq ($(MAKECMDGOALS),clean)
- ifneq ($(MAKECMDGOALS),fclean)
-  ifneq ($(MAKECMDGOALS),doc)
-   -include $(DEPS)
-  endif
- endif
-endif
-
-$(DEPS_DIR)/%.d: ;
-.PRECIOUS: $(DEPS_DIR)/%.d
-
-$(BUILD_DIR):
-	@$(MKDIR) -p $@
-
-re: fclean all
+%.o:$(SRC_PATH)/%.c
+	gcc -c $(FLAGS) -I $(INC) $< -o $@
 
 clean:
-ifeq ($(shell [ -e $(OBJS_DIR) ] && echo 1 || echo 0),1)
-	$(RM) $(OBJS_DIR)
-endif
-ifeq ($(shell [ -e $(DEPS_DIR) ] && echo 1 || echo 0),1)
-	$(RM) $(DEPS_DIR)
-endif
+	echo "\033[35mRemoving .o files\033[0m"
+	/bin/rm -rf obj/$(OBJ)
 
 fclean: clean
-ifeq ($(shell [ -e $(NAME) ] && echo 1 || echo 0),1)
-	$(RM) $(NAME)
-endif
-ifeq ($(shell [ -e test ] && echo 1 || echo 0),1)
-	$(RM) $(NAME)
-endif
-doc:
-ifndef DOXYGEN
-	@echo "Please install doxygen first (brew install doxygen)."
-else
-	@doxygen Doxyfile 1> /dev/null
-	@printf "[\033[35m--------------------------\033[0m]\n"
-	@printf "[\033[36m------ Documentation -----\033[0m]\n"
-	@printf "[\033[36m------   generated   -----\033[0m]\n"
-	@printf "[\033[35m--------------------------\033[0m]\n"
-endif
+	echo "\033[35mRemoving .a files\033[0m"
+	/bin/rm -rf $(NAME)
 
-.PHONY: re clean fclean all doc tests
-.SUFFIXES: .c .h .o .d
+re: fclean all

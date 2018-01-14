@@ -17,6 +17,7 @@
 # include <wchar.h>
 # include <inttypes.h>
 # include <core/core.h>
+# include <afxres.h>
 
 /*
 ** Typedefs :

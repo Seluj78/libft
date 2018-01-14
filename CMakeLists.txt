@@ -127,6 +127,6 @@ set(SOURCE_FILES
 
 include_directories(includes)
 
-add_library(jlasne ${SOURCE_FILES})
+add_library(libjlasne ${SOURCE_FILES})
 
 #add_subdirectory(tests)

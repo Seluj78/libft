@@ -85,3 +85,5 @@ cmake-build-debug/Makefile
 cmake-build-debug/cmake_install.cmake
 cmake-build-debug/libft.cbp
 cmake-build-debug/libjlasne.cbp
+cmake-build-debug/*
+codealike.json
