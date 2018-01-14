@@ -13,155 +13,168 @@
 NAME = libjlasne.a
 
 # Libft Core
-SRCS += core/ft_add_to_array.c \
-		core/ft_arraylen.c \
-		core/ft_atoi.c \
-		core/ft_atoi_base.c \
-		core/ft_atoi_nbase.c \
-		core/ft_binlen.c \
-		core/ft_bzero.c \
-		core/ft_cat.c \
-		core/ft_charwlen.c \
-		core/ft_free_array.c \
-		core/ft_isalnum.c \
-		core/ft_isalpha.c \
-		core/ft_isascii.c \
-		core/ft_isdigit.c \
-		core/ft_isprint.c \
-		core/ft_itoa.c \
-		core/ft_itoa_base.c \
-		core/ft_itoa_base_l.c \
-		core/ft_itoa_base_ll.c \
-		core/ft_itoa_base_uint.c \
-		core/ft_memalloc.c \
-		core/ft_memccpy.c \
-		core/ft_memchr.c \
-		core/ft_memcmp.c \
-		core/ft_memcpy.c \
-		core/ft_memdel.c \
-		core/ft_memmove.c \
-		core/ft_memset.c \
-		core/ft_nblen.c \
-		core/ft_nblen_l.c \
-		core/ft_nblen_ll.c \
-		core/ft_power.c \
-		core/ft_print_array.c \
-		core/ft_putchar.c \
-		core/ft_putchar_fd.c \
-		core/ft_putendl.c \
-		core/ft_putendl_fd.c \
-		core/ft_putnbr.c \
-		core/ft_putnbr_fd.c \
-		core/ft_putnbr_l.c \
-		core/ft_putnbr_ll.c \
-		core/ft_putnstr.c \
-		core/ft_putnwchar.c \
-		core/ft_putnwstr.c \
-		core/ft_putstr.c \
-		core/ft_putstr_fd.c \
-		core/ft_putwchar.c \
-		core/ft_remfrom_array.c \
-		core/ft_split_whitespaces.c \
-		core/ft_str_to_tab_sep.c \
-		core/ft_str_to_tab_sep_helper.c \
-		core/ft_strcat.c \
-		core/ft_strchr.c \
-		core/ft_strclr.c \
-		core/ft_strcmp.c \
-		core/ft_strcpy.c \
-		core/ft_strdel.c \
-		core/ft_strdup.c \
-		core/ft_strequ.c \
-		core/ft_strisdigit.c \
-		core/ft_striter.c \
-		core/ft_striteri.c \
-		core/ft_strjoin.c \
-		core/ft_strjoin_sep.c \
-		core/ft_strlcat.c \
-		core/ft_strlen.c \
-		core/ft_strmap.c \
-		core/ft_strmapi.c \
-		core/ft_strncat.c \
-		core/ft_strncmp.c \
-		core/ft_strncpy.c \
-		core/ft_strnequ.c \
-		core/ft_strnew.c \
-		core/ft_strnstr.c \
-		core/ft_strrchr.c \
-		core/ft_strsplit.c \
-		core/ft_strstr.c \
-		core/ft_strsub.c \
-		core/ft_strtrim.c \
-		core/ft_strwlen.c \
-		core/ft_tabdup.c \
-		core/ft_tolower.c \
-		core/ft_toupper.c \
+SRCS += srcs/core/ft_add_to_array.c \
+		srcs/core/ft_arraylen.c \
+		srcs/core/ft_atoi.c \
+		srcs/core/ft_atoi_base.c \
+		srcs/core/ft_atoi_nbase.c \
+		srcs/core/ft_binlen.c \
+		srcs/core/ft_bzero.c \
+		srcs/core/ft_cat.c \
+		srcs/core/ft_charwlen.c \
+		srcs/core/ft_free_array.c \
+		srcs/core/ft_isalnum.c \
+		srcs/core/ft_isalpha.c \
+		srcs/core/ft_isascii.c \
+		srcs/core/ft_isdigit.c \
+		srcs/core/ft_isprint.c \
+		srcs/core/ft_itoa.c \
+		srcs/core/ft_itoa_base.c \
+		srcs/core/ft_itoa_base_l.c \
+		srcs/core/ft_itoa_base_ll.c \
+		srcs/core/ft_itoa_base_uint.c \
+		srcs/core/ft_memalloc.c \
+		srcs/core/ft_memccpy.c \
+		srcs/core/ft_memchr.c \
+		srcs/core/ft_memcmp.c \
+		srcs/core/ft_memcpy.c \
+		srcs/core/ft_memdel.c \
+		srcs/core/ft_memmove.c \
+		srcs/core/ft_memset.c \
+		srcs/core/ft_nblen.c \
+		srcs/core/ft_nblen_l.c \
+		srcs/core/ft_nblen_ll.c \
+		srcs/core/ft_power.c \
+		srcs/core/ft_print_array.c \
+		srcs/core/ft_putchar.c \
+		srcs/core/ft_putchar_fd.c \
+		srcs/core/ft_putendl.c \
+		srcs/core/ft_putendl_fd.c \
+		srcs/core/ft_putnbr.c \
+		srcs/core/ft_putnbr_fd.c \
+		srcs/core/ft_putnbr_l.c \
+		srcs/core/ft_putnbr_ll.c \
+		srcs/core/ft_putnstr.c \
+		srcs/core/ft_putnwchar.c \
+		srcs/core/ft_putnwstr.c \
+		srcs/core/ft_putstr.c \
+		srcs/core/ft_putstr_fd.c \
+		srcs/core/ft_putwchar.c \
+		srcs/core/ft_remfrom_array.c \
+		srcs/core/ft_split_whitespaces.c \
+		srcs/core/ft_str_to_tab_sep.c \
+		srcs/core/ft_str_to_tab_sep_helper.c \
+		srcs/core/ft_strcat.c \
+		srcs/core/ft_strchr.c \
+		srcs/core/ft_strclr.c \
+		srcs/core/ft_strcmp.c \
+		srcs/core/ft_strcpy.c \
+		srcs/core/ft_strdel.c \
+		srcs/core/ft_strdup.c \
+		srcs/core/ft_strequ.c \
+		srcs/core/ft_strisdigit.c \
+		srcs/core/ft_striter.c \
+		srcs/core/ft_striteri.c \
+		srcs/core/ft_strjoin.c \
+		srcs/core/ft_strjoin_sep.c \
+		srcs/core/ft_strlcat.c \
+		srcs/core/ft_strlen.c \
+		srcs/core/ft_strmap.c \
+		srcs/core/ft_strmapi.c \
+		srcs/core/ft_strncat.c \
+		srcs/core/ft_strncmp.c \
+		srcs/core/ft_strncpy.c \
+		srcs/core/ft_strnequ.c \
+		srcs/core/ft_strnew.c \
+		srcs/core/ft_strnstr.c \
+		srcs/core/ft_strrchr.c \
+		srcs/core/ft_strsplit.c \
+		srcs/core/ft_strstr.c \
+		srcs/core/ft_strsub.c \
+		srcs/core/ft_strtrim.c \
+		srcs/core/ft_strwlen.c \
+		srcs/core/ft_tabdup.c \
+		srcs/core/ft_tolower.c \
+		srcs/core/ft_toupper.c \
 
 
 #Printf
 # Printf Checks
-SRCS +=     ft_printf/checks/check_flags.c \
-		ft_printf/checks/check_precision_max.c \
-		ft_printf/checks/check_spaces.c \
-		ft_printf/checks/check_width.c \
+SRCS +=     srcs/ft_printf/checks/check_flags.c \
+		srcs/ft_printf/checks/check_precision_max.c \
+		srcs/ft_printf/checks/check_spaces.c \
+		srcs/ft_printf/checks/check_width.c \
 
 #Printf color
-SRCS +=     ft_printf/color/color.c \
-		ft_printf/color/color2.c \
-		ft_printf/color/color3.c \
+SRCS +=     srcs/ft_printf/color/color.c \
+		srcs/ft_printf/color/color2.c \
+		srcs/ft_printf/color/color3.c \
 
 #Printf Convert
-SRCS +=     ft_printf/convert/convert_c.c \
-		ft_printf/convert/convert_d.c \
-		ft_printf/convert/convert_jzlh.c \
-		ft_printf/convert/convert_o.c \
-		ft_printf/convert/convert_p.c \
-		ft_printf/convert/convert_percent.c \
-		ft_printf/convert/convert_r.c \
-		ft_printf/convert/convert_s.c \
-		ft_printf/convert/convert_u.c \
-		ft_printf/convert/convert_x.c \
+SRCS +=     srcs/ft_printf/convert/convert_c.c \
+		srcs/ft_printf/convert/convert_d.c \
+		srcs/ft_printf/convert/convert_jzlh.c \
+		srcs/ft_printf/convert/convert_o.c \
+		srcs/ft_printf/convert/convert_p.c \
+		srcs/ft_printf/convert/convert_percent.c \
+		srcs/ft_printf/convert/convert_r.c \
+		srcs/ft_printf/convert/convert_s.c \
+		srcs/ft_printf/convert/convert_u.c \
+		srcs/ft_printf/convert/convert_x.c \
 
 #Printf Core
-SRCS +=     ft_printf/core/ft_printf.c \
-		ft_printf/core/parser.c \
-		ft_printf/core/utils.c \
+SRCS +=     srcs/ft_printf/core/ft_printf.c \
+		srcs/ft_printf/core/parser.c \
+		srcs/ft_printf/core/utils.c \
 
 #Printf Print
-SRCS +=     ft_printf/print/print_d.c \
-		ft_printf/print/print_o.c \
-		ft_printf/print/print_u.c \
-		ft_printf/print/print_x.c \
-		ft_printf/print/print_xx.c \
+SRCS +=     srcs/ft_printf/print/print_d.c \
+		srcs/ft_printf/print/print_o.c \
+		srcs/ft_printf/print/print_u.c \
+		srcs/ft_printf/print/print_x.c \
+		srcs/ft_printf/print/print_xx.c \
 
+CC = clang
 
-SRC_PATH = ./srcs
+INC = -I includes
+INC += -I includes/core/includes
+INC += -I includes/ft_printf/
 
-SRC_POS = $(addprefix $(SRC_PATH),$(SRCS))
+CC				= clang
+FLAGS			= -Wall -Wextra
+
+# For the deprecated errors
+ifneq ($(NOERR),yes)
+    FLAGS		+= -Werror
+endif
+
+# For the debug options, used for example in valgrind
+ifeq ($(DEV),yes)
+    FLAGS		+= -g
+endif
+
+# Used when debugging memory
+ifeq ($(SAN),yes)
+    FLAGS		+= -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls
+endif
 
 OBJ = $(SRCS:.c=.o)
 
-OBJ_DIR = ./obj
-
-INC = includes
-INC += includes/core/includes
-INC += includes/ft_printf/
+#TODO: DOC, Objects in a separate folder
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar r $(NAME) $(OBJ)
 	ranlib $(NAME)
-	if [ -d "./obj" ]; then echo "\033[35mDirectory\033[34m obj\033[35m already exists\033[0m"; else mkdir obj; fi
-	mv *.o $(OBJ_DIR)/
 	echo "\033[35mLibft compilation complete\033[0m" "\033[32m [ok] \033[32m"
 
-%.o:$(SRC_PATH)/%.c
-	gcc -c $(FLAGS) -I $(INC) $< -o $@
+%.o:%.c
+	$(CC) $(FLAGS) $(INC) -o $@ -c $<
 
 clean:
 	echo "\033[35mRemoving .o files\033[0m"
-	/bin/rm -rf obj/$(OBJ)
+	/bin/rm -rf $(OBJ)
 
 fclean: clean
 	echo "\033[35mRemoving .a files\033[0m"
