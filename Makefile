@@ -97,6 +97,9 @@ SRCS += srcs/core/ft_add_to_array.c \
 		srcs/core/ft_tolower.c \
 		srcs/core/ft_toupper.c \
 
+#Libft unistd
+SRCS += srcs/unistd/ft_getopt.c\
+
 
 #Printf
 # Printf Checks
@@ -138,6 +141,7 @@ CC = clang
 
 INC = -I includes
 INC += -I includes/core/includes
+INC += -I includes/unistd
 INC += -I includes/ft_printf/
 
 CC				= clang
