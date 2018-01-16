@@ -19,6 +19,11 @@ int					g_optind = 1;
 int					g_optopt;
 char				*g_optarg;
 
+/*
+** @todo: Add documentation on ft_getopt
+** @body: The ft_getopt.c file and all it's functions need doxygen doc
+*/
+
 static int			go_init(int ac, char *const *av)
 {
 	if (g_optind >= ac
